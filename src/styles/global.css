@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/Poppins.ttf") format("truetype");
+}
+@font-face {
+  font-family: "VastShadow";
+  src: url("/VastShadow-Regular.ttf") format("truetype");
+}
+
+*::selection {
+  color: #ffffff;
+  background: #5b70a0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.list ul,
+.list ol {
+  list-style-type: square;
+  padding-left: 20px;
+  margin: 1em 0;
+}
+
+.list li {
+  margin-bottom: 0.5em;
+}

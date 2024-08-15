@@ -1,0 +1,29 @@
+---
+import { Footer } from "@/components/app/Footer";
+import { Header } from "@/components/app/Header";
+import { Contact } from "@/components/pages/Contact";
+import { Faq } from "@/components/pages/Faq";
+import Layout from "@/layouts/Layout.astro";
+import "@/styles/global.css";
+---
+
+<Layout title="Welcome to Astro.">
+  <div class="bg-[url('/bg-test.jpg')] h-screen bg-cover relative">
+    <div
+      class="h-full w-full backdrop-blur-3xl bg-neutral-900/70 flex flex-col"
+    >
+      <Header />
+      <div class="bg-white flex-1">
+        <Contact client:visible />
+      </div>
+    </div>
+  </div>
+  <div class="bg-[url('/bg-test.jpg')] bg-cover relative">
+    <div
+      class="h-full w-full backdrop-blur-3xl py-24 bg-neutral-900/70 flex flex-col"
+    >
+      <Faq client:visible />
+    </div>
+  </div>
+  <Footer />
+</Layout>
